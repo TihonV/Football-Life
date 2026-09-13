@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Политика конфиденциальности и Лицензия</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --bg-card: #161b22;
+    --bg-card-hover: #1c2128;
+    --border: #30363d;
+    --text: #e6edf3;
+    --text-dim: #8b949e;
+    --accent: #58a6ff;
+    --accent-hover: #79c0ff;
+    --green: #3fb950;
+    --green-hover: #56d364;
+    --purple: #a371f7;
+    --purple-hover: #bc8cff;
+    --radius: 12px;
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(88, 166, 255, 0.08), transparent 40%),
+      radial-gradient(circle at 85% 80%, rgba(163, 113, 247, 0.08), transparent 40%);
+    background-attachment: fixed;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+
+  /* ---------- HEADER ---------- */
+  header {
+    text-align: center;
+    margin-bottom: 50px;
+    animation: fadeIn 0.6s ease;
+  }
+
+  .logo {
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(135deg, var(--accent), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+  }
+
+  .subtitle {
+    color: var(--text-dim);
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .copyright {
+    color: var(--text-dim);
+    font-size: 13px;
+    opacity: 0.7;
+  }
+
+  /* ---------- BUTTONS ---------- */
+  .buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    animation: fadeIn 0.8s ease;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-card);
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent, rgba(255,255,255,0.05));
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+    border-color: var(--accent);
+  }
+
+  .btn:hover::before { opacity: 1; }
+
+  .btn:active { transform: translateY(-1px); }
+
+  .btn-privacy { border-color: rgba(88, 166, 255, 0.4); }
+  .btn-privacy:hover { border-color: var(--accent); color: var(--accent-hover); }
+
+  .btn-license { border-color: rgba(163, 113, 247, 0.4); }
+  .btn-license:hover { border-color: var(--purple); color: var(--purple-hover); }
+
+  .btn svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  /* ---------- CONTENT CARD ---------- */
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 40px;
+    box-shadow: var(--shadow);
+    animation: fadeIn 1s ease;
+    position: relative;
+  }
+
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--purple));
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+
+  .card h1, .card h2, .card h3 {
+    color: var(--text);
+    margin-top: 28px;
+    margin-bottom: 14px;
+    line-height: 1.3;
+  }
+
+  .card h1 {
+    font-size: 28px;
+    background: linear-gradient(135deg, var(--accent), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-top: 0;
+  }
+
+  .card h2 {
+    font-size: 22px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+
+  .card h3 { font-size: 18px; color: var(--accent); }
+
+  .card p { margin-bottom: 14px; color: var(--text); }
+
+  .card ul, .card ol {
+    margin-bottom: 14px;
+    padding-left: 28px;
+  }
+
+  .card li { margin-bottom: 6px; }
+
+  .card strong { color: #fff; font-weight: 700; }
+
+  .card em { color: var(--text-dim); }
+
+  .card hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 28px 0;
+  }
+
+  .card a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--accent);
+  }
+
+  .card a:hover { color: var(--accent-hover); }
+
+  /* ---------- LOADING / ERROR ---------- */
+  .loading, .error {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-dim);
+    font-size: 15px;
+  }
+
+  .error { color: #f85149; }
+
+  .spinner {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: 3px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-bottom: 16px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    text-align: center;
+    margin-top: 50px;
+    color: var(--text-dim);
+    font-size: 13px;
+    opacity: 0.7;
+  }
+
+  footer .heart { color: #f85149; }
+
+  /* ---------- ANIMATIONS ---------- */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 600px) {
+    .container { padding: 24px 14px 60px; }
+    .logo { font-size: 30px; }
+    .card { padding: 24px; }
+    .card h1 { font-size: 22px; }
+    .card h2 { font-size: 18px; }
+    .btn { width: 100%; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Политика и Лицензия</div>
+    <div class="subtitle">Правообладатель: Тихон Михайлович Метелкин</div>
+    <div class="copyright">© 2026. Все права защищены. Все совпадения случайны.</div>
+  </header>
+
+  <!-- BUTTONS -->
+  <div class="buttons">
+    <a href="Politica.txt" download class="btn btn-privacy">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+      Политика конфиденциальности
+    </a>
+    <a href="License.txt" download class="btn btn-license">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="9" y1="15" x2="15" y2="15"/>
+      </svg>
+      Лицензия
+    </a>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="card" id="content">
+    <div class="loading">
+      <div class="spinner"></div>
+      <div>Загрузка Politica.txt...</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    Сделано с <span class="heart">♥</span> для GitHub Pages
+  </footer>
+
+</div>
+
+<script>
+/* ============================================================
+   Загрузка Politica.txt и рендер как красивый документ
+   ============================================================ */
+
+async function loadPolitica() {
+  const content = document.getElementById('content');
+
+  try {
+    // cache-bust, чтобы всегда тянуть свежую версию
+    const res = await fetch('Politica.txt?v=' + Date.now());
+
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+
+    const text = await res.text();
+
+    if (!text.trim()) throw new Error('Файл пуст');
+
+    content.innerHTML = renderMarkdown(text);
+  } catch (err) {
+    content.innerHTML =
+      '<div class="error">' +
+        '⚠ Не удалось загрузить <strong>Politica.txt</strong><br>' +
+        '<small>' + err.message + '</small><br><br>' +
+        '<small>Убедись, что файл лежит в корне репозитория рядом с index.html</small>' +
+      '</div>';
+  }
+}
+
+/* ============================================================
+   Мини-парсер Markdown → HTML
+   Поддерживает: # заголовки, списки, **жирный**, *курсив*,
+   --- разделители, [ссылки](url), переносы строк
+   ============================================================ */
+
+function renderMarkdown(md) {
+  const lines = md.replace(/\r\n/g, '\n').split('\n');
+  let html = '';
+  let inList = false;
+  let inOrdered = false;
+
+  const inline = (s) => s
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+
+  const closeList = () => {
+    if (inList)    { html += '</ul>';   inList = false; }
+    if (inOrdered) { html += '</ol>';   inOrdered = false; }
+  };
+
+  for (let raw of lines) {
+    const line = raw.trimEnd();
+
+    // Пустая строка
+    if (!line.trim()) { closeList(); continue; }
+
+    // Разделитель ---
+    if (/^-{3,}$/.test(line.trim())) {
+      closeList();
+      html += '<hr>';
+      continue;
+    }
+
+    // Заголовки
+    const h = line.match(/^(#{1,6})\s+(.*)$/);
+    if (h) {
+      closeList();
+      const level = h[1].length;
+      html += `<h${level}>${inline(h[2])}</h${level}>`;
+      continue;
+    }
+
+    // Маркированный список
+    const ul = line.match(/^\s*[-*+]\s+(.*)$/);
+    if (ul) {
+      if (inOrdered) { html += '</ol>'; inOrdered = false; }
+      if (!inList)   { html += '<ul>';  inList = true; }
+      html += `<li>${inline(ul[1])}</li>`;
+      continue;
+    }
+
+    // Нумерованный список
+    const ol = line.match(/^\s*\d+\.\s+(.*)$/);
+    if (ol) {
+      if (inList)    { html += '</ul>'; inList = false; }
+      if (!inOrdered) { html += '<ol>'; inOrdered = true; }
+      html += `<li>${inline(ol[1])}</li>`;
+      continue;
+    }
+
+    // Обычный параграф
+    closeList();
+    html += `<p>${inline(line)}</p>`;
+  }
+
+  closeList();
+  return html;
+}
+
+/* ============================================================
+   Старт
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', loadPolitica);
+</script>
+
+</body>
+</html>
